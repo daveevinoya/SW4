@@ -110,5 +110,5 @@ WD-ProjectName
 <!-- TODO: Add References -->
 | Title | Purpose | Link |
 |-|-|-|
-| Acura Website | reference for the images and informations that are used in the Audi feature design website | https://www.acurainfocenter.com/vehicle-info/nsx-type-s/feature-benefits/powertrain |
-| ZUS Coffee website | reference for the images and informations that are used in the Starbucks feature design website | https://zuscoffee.ph|
+| Acura Website | reference for the images and informations that are used in the Honda NSX feature design website | https://www.acurainfocenter.com/vehicle-info/nsx-type-s/feature-benefits/powertrain |
+| ZUS Coffee website | reference for the images and informations that are used in the ZUS feature design website | https://zuscoffee.ph|
