@@ -1,0 +1,424 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #333;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(55, 52, 237, 0.5),rgba(3,0,136,0.5)),url(../img/Audibg.jpg);
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  transition: background 1s;
+}
+
+nav .logo{
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+nav .logo img{
+  width: 60px;
+  margin-right: 10px;
+}
+
+nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 1s;
+}
+
+nav a{
+  text-decoration: none;
+}
+
+nav:hover{
+  background: white;
+}
+
+nav:hover .logo{
+  color: #333;
+}
+
+
+nav:hover ul li a{
+  color: #333;
+}
+
+nav ul li a:hover{
+  color: blue;
+}
+
+.content{
+  margin-top: 9%;
+  margin-left: 9%;
+  color: #ffffff;
+}
+
+.content h1{
+  font-size: 120px;
+  line-height: 140px;
+  font-weight: 600;
+  opacity: 0;
+}
+
+.content p{
+  max-width: 500px;
+  line-height: 28px;
+  opacity: 0;
+}
+
+.links{
+  margin-top: 30px;
+  opacity: 0;
+}
+
+.links a{
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn{
+  border: 2px solid #ffffff;
+  padding: 10px 35px;
+  border-radius: 30px;
+  margin-right: 15px;
+}
+
+.slide-left{
+  animation: slideleft 1s linear forwards;
+}
+
+h1.slide-left {
+  animation-delay: 1s;
+}
+
+p.slide-left {
+  animation-delay: 2s;
+}
+
+.links{
+  animation: slideleft 1s linear forwards;
+  animation-delay: 3s;
+}
+
+
+@keyframes slideleft{
+  0%{
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100%{
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+ /*features  */
+ .card1{
+    margin-top: 15%;
+    height: 100vh;
+    margin-left: 15%;
+    font-family: 'Poppins',sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+
+.card1 img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+}
+
+.card-container{
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    row-gap: 3.5rem;
+}
+
+.card-article{
+    position: relative;
+    overflow:hidden
+}
+
+.card-img{
+    width: 328px;
+    border-radius: 1.5rem;
+}
+
+.card-data{
+    width: 300px;
+    background-color: #ffffff;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -9rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+}
+
+.card-description{
+    display: block;
+    font-size: 12px;
+    margin-bottom: .25rem;
+    color: black;
+}
+
+.card-title{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    margin-bottom: .75rem;
+}
+
+.card-button{
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+}
+.card-button:hover{
+    text-decoration: underline;
+}
+
+.card-article:hover .card-data{
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.card-article:hover{
+    animation: remove-overflow 2s forwards;
+}
+
+.card-article:not(:hover){
+    animation: show-overflow 2s forwards;
+}
+
+.card-article:not(:hover) .card-data{
+    animation: remove-data 1s forwards;
+}
+
+
+@keyframes show-data{
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(-7rem);
+    }
+}
+
+@keyframes remove-overflow {
+    to{
+        overflow:initial;
+    }
+}
+
+@keyframes remove-data{
+    0%{
+        transform: translateY(-7rem);
+    }
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(.5rem);
+    }
+}
+
+@keyframes show-overflow {
+    0%{
+        overflow: initial;
+        pointer-events: none;
+    }
+    50%{
+        overflow: hidden;
+    }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+.header .buy {
+    color: rgb(255, 255, 255);
+    font-size: 27px;
+    text-decoration: none;
+}
+
+.header a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.header .nav-links a {
+    margin: 0;
+}
+
+.hero-part {
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+   background: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2Fvideo%2Fsearch%2Fhonda-logo&psig=AOvVaw3dHPgBFag3WBzamPK53gVN&ust=1722113110471000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMD5srTJxYcDFQAAAAAdAAAAABAE)  no-repeat center center;
+   background-size: cover;
+}
+
+
+ /*features  */
+ .features {
+    padding: 20px;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 10px;
+}
+
+.box {
+    width: calc(33.33% - 13.33px);
+    background-color: #fff;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+ /* footer*/
+  
+ .footer {
+    background-color: #222;
+    color: #fff;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+ }
+ 
+ 
+ .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+ }
+ 
+ 
+ .footer-left h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+ }
+ 
+ 
+ .footer-left p {
+    font-size: 14px;
+    line-height: 1.5;
+ }
+ 
+ 
+ .footer-right {
+    display: flex;
+    align-items: center;
+ }
+ 
+ 
+ .footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+ }
+ 
+ 
+ .footer-links li {
+    display: inline-block;
+    margin-right: 20px;
+ }
+ 
+ 
+ .footer-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+ }
+ 
+ 
+ .footer-social {
+    margin-left: 20px;
+ }
+ 
+ 
+ .footer-social a {
+    display: inline-block;
+    margin-right: 10px;
+ }
+ 
+ 
+ .footer-social img {
+    width: 30px;
+    height: auto;
+ }
