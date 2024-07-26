@@ -70,8 +70,7 @@ p {
         text-align: center;
     }
     
-    .landing-page {
-        background: url('../img/haikyuu.jpg') no-repeat center center fixed; 
+    .landing-page { 
         background-size: cover;
         height: 100%;
         display: flex;
